@@ -1,0 +1,109 @@
+@import '../../mixins';
+
+$purple: rgb(192, 53, 134);
+$blue: var(--primary);
+
+.wrap-aimgame {
+	height: 100vh;
+	overflow: hidden;
+	position: relative;
+}
+.pre-score {
+	position: absolute;
+	top: 20px;
+	left: 80px;
+	width: max-content;
+	color: bisque;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+}
+.btn-start {
+	color: var(--primary);
+	font-size: 22px;
+	font-weight: bold;
+
+	cursor: pointer;
+	border: 0;
+	background: transparent;
+	text-transform: uppercase;
+	@include text-shadow(var(--primary));
+}
+.screen {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+	width: 100vw;
+	transition: margin 0.5s ease-out;
+}
+
+.screen.up {margin-top: -100vh;}
+
+.time-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	list-style: none;
+	padding: 0;
+}
+
+.time-list li {margin: 10px;}
+
+.time-btn {
+	background-color: transparent;
+	border: 2px solid $blue;
+	color: $blue;
+	cursor: pointer;
+	font-family: inherit;
+	padding: .5rem 1rem;
+	font-size: 1.5rem;
+}
+
+.time-btn:hover {
+	border: 2px solid $purple;
+	color: $purple;
+}
+
+.board {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	position: relative;
+	width: 500px;
+	height: 500px;
+	background: #4907418c;
+	overflow: hidden;
+}
+
+// .circle {
+// 	background: linear-gradient(90deg, #16D9E3 0%, #30C7EC 47%, #46AEF7 100%);
+// 	position: absolute;
+// 	border-radius: 50%;
+// 	cursor: pointer;
+// }
+
+.btn-reload {
+	border: none;
+	padding: 10px 20px;
+	background: #a24597;
+	margin: 0;
+	font-size: 24px;
+	color: #fff;
+	cursor: pointer;
+}
+
+.finish-game {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background: #13061e;
+	z-index: 1;
+}

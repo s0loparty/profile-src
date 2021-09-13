@@ -1,0 +1,15 @@
+@mixin text-shadow($color) {
+	text-shadow: 0 0 20px $color, 0 0 20px $color;
+	animation: textshadow 2s infinite;
+	@keyframes textshadow {
+		0% {
+			text-shadow: 0 0 20px $color;
+		}
+		50% {
+			text-shadow: 0 0 20px $color, 0 0 20px $color;
+		}
+		100% {
+			text-shadow: 0 0 20px $color;
+		}
+	}
+}
