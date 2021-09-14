@@ -24,7 +24,7 @@
 			<div @click="clickToCircle" class="board" ref="board">
 				<div v-if="isFinishGame" class="finish-game">
 					<h1 style="color: mediumpurple;">Счёт: {{score}}</h1>
-					<button class="btn-reload" @click="reloadGame">Заного</button>
+					<button class="btn-reload" @click="reloadGame">Заново</button>
 				</div>
 			</div>
 		</div>
