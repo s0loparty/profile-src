@@ -1,8 +1,7 @@
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 
 import Examples from '@/views/examples/Examples'
 import Aimgame from '@/views/examples/Aimgame'
-// import Hoverboard from '@/views/examples/Hoverboard'
 import Gallery from '@/views/examples/Gallery'
 
 const sanya = 'Александр Суетов |'
@@ -35,9 +34,14 @@ const routes = [
 ]
 
 const router = createRouter({
-	history: createWebHistory(process.env.BASE_URL),
+	history: createWebHashHistory(process.env.BASE_URL),
 	linkActiveClass: 'is-active',
-	routes
+	routes,
+
+	scrollBehavior(to, from, savedPosition) {
+		const obj = { behavior: 'smooth', top: 0 }
+		return savedPosition ?? obj
+	}
 })
 
 router.beforeEach((to, from, next) => {
