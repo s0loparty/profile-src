@@ -45,8 +45,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/styles/main.scss';
-
 .setup-wrap {
 	position: absolute;
 	top: 0;

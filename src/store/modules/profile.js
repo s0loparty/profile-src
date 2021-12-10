@@ -30,7 +30,7 @@ export default {
 					{ 
 						title: 'weather app',
 						text: 'приложение погоды',
-						demo: 'https://s0loparty.github.io/vue-weather-page/', 
+						demo: 'https://weather-app-dth.pages.dev/', 
 						source: 'https://github.com/s0loparty/vue-weather-app'
 					},
 					{ 
